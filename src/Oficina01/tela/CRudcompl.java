@@ -3,6 +3,7 @@
 package Oficina01.tela;
 
 public class CRudcompl extends javax.swing.JFrame {
+    private Object JOptionPane;
 
    
     public CRudcompl() {
@@ -128,7 +129,11 @@ public class CRudcompl extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
-        // TODO add your handling code here:
+        if(validaCamposObrigatorios()){
+            JOptionPane.showMessageDiaLog(null, "Preencha todos os campos antes de salvar!");
+        }else{
+            
+        }
     }//GEN-LAST:event_btnSalvarActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
@@ -187,4 +192,8 @@ public class CRudcompl extends javax.swing.JFrame {
     private java.util.List list1;
     private javax.persistence.Query query1;
     // End of variables declaration//GEN-END:variables
+
+    private boolean validaCamposObrigatorios() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
